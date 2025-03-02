@@ -1,24 +1,3 @@
-
-# Import the API
-
-# Get the first result from app
-# top_result = API.get_first_app_result(name='EVMap - EV chargers')
-
-# # # Get all apps from result
-# # all_results = API.get_all_apps_results(name='App Name')
-
-# # # Get info from an app
-# # app_info = API.get_info(name='App Name')
-
-# # # Get the versions of an app
-# # versions = API.get_versions(name='App Name')
-
-# # # Downlaod an app, you can pass a version and also the type of file between apk and xapk
-# # # version and xapk are optional parameters
-# # API.download(name='App Name', version='1.1.1', xapk=True)
-# print(top_result)
-# Import the API
-# Import the API
 from apkpure import ApkPure
 import os
 
@@ -36,10 +15,10 @@ def is_app_downloaded(app_name, download_dir):
     return False
 
 # 设置下载目录
-download_dir = r'C:\Users\22863\Desktop\毕设\app数据集_google\app集合'
+download_dir = r'C:\Users\22863\Desktop\毕设\app数据集\OBD app'
 
 # 打开包含应用名称的文件
-with open('namelist.txt', 'r', encoding='utf-8') as file:
+with open('namelist_OBD.txt', 'r', encoding='utf-8') as file:
     # 逐行读取文件
     for line in file:
         # 去除每行末尾的换行符
@@ -60,4 +39,3 @@ with open('namelist.txt', 'r', encoding='utf-8') as file:
                 print(f"Failed to download {app_name}. Skipping...")
         except Exception as e:
             print(f"Error: Failed to download {app_name}. Reason: {e}")
-# API.download(name = 'EVMap - EV chargers')
